@@ -1,23 +1,11 @@
-**DEVELOPER INSTRUCTIONS:**
+# Selectel DNS v2 module for Caddy
 
-- Update module name in go.mod
-- Update dependencies to latest versions
-- Update name and year in license
-- Customize configuration and Caddyfile parsing
-- Update godocs / comments (especially provider name and nuances)
-- Update README and remove this section
-
----
-
-\<PROVIDER\> module for Caddy
-===========================
-
-This package contains a DNS provider module for [Caddy](https://github.com/caddyserver/caddy). It can be used to manage DNS records with \<PROVIDER\>.
+This package contains a DNS provider module for [Caddy](https://github.com/caddyserver/caddy). It can be used to manage DNS records with Timeweb API.
 
 ## Caddy module name
 
 ```
-dns.providers.provider_name
+dns.providers.timeweb
 ```
 
 ## Config examples
@@ -26,15 +14,16 @@ To use this module for the ACME DNS challenge, [configure the ACME issuer in you
 
 ```json
 {
-	"module": "acme",
-	"challenges": {
-		"dns": {
-			"provider": {
-				"name": "provider_name",
-				"api_token": "YOUR_PROVIDER_API_TOKEN"
-			}
-		}
-	}
+  "module": "acme",
+  "challenges": {
+    "dns": {
+      "provider": {
+        "name": "timeweb",
+        "ApiURL": "",
+        "ApiToken": ""
+      }
+    }
+  }
 }
 ```
 
@@ -43,13 +32,19 @@ or with the Caddyfile:
 ```
 # globally
 {
-	acme_dns provider_name ...
+	acme_dns timeweb {
+		ApiURL <API_URL>
+		ApiToken <API_TOKEN>
+	}
 }
 ```
 
 ```
 # one site
 tls {
-	dns provider_name ...
+	dns timeweb {
+		ApiURL <API_URL>
+		ApiToken <API_TOKEN>
+	}
 }
 ```
