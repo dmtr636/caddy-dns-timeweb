@@ -6,7 +6,7 @@ toolchain go1.23.0
 
 require (
 	github.com/caddyserver/caddy/v2 v2.8.4
-	github.com/libdns/timeweb v1.0.1
+	github.com/dmtr636/libdns-timeweb v1.0.2
 )
 
 require (
