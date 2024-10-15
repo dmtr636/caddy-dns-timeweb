@@ -6,7 +6,7 @@ toolchain go1.23.0
 
 require (
 	github.com/caddyserver/caddy/v2 v2.8.4
-	github.com/dmtr636/libdns-timeweb v1.0.2
+	github.com/dmtr636/libdns-timeweb v1.0.3
 )
 
 require (
@@ -29,7 +29,7 @@ require (
 	github.com/prometheus/procfs v0.15.1 // indirect
 	github.com/quic-go/qpack v0.5.1 // indirect
 	github.com/quic-go/quic-go v0.46.0 // indirect
-	github.com/zeebo/blake3 v0.2.4 // indirect
+	github.com/zeebo/blake3 v0.2.3 // indirect
 	go.uber.org/mock v0.4.0 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
 	go.uber.org/zap v1.27.0 // indirect
